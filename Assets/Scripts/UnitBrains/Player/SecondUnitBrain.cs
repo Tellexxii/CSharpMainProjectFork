@@ -45,6 +45,8 @@ namespace UnitBrains.Player
             ///////////////////////////////////////
             List<Vector2Int> result = GetReachableTargets();
 
+            if (result.Count == 0) return result;
+
             float closestDistance = float.MaxValue;
             Vector2Int closestTarget = result.First();
 
